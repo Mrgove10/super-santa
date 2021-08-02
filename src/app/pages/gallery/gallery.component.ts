@@ -10,7 +10,6 @@ export class GalleryComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log('gallery page');
   }
 
 }

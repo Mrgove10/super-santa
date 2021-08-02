@@ -1,21 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GalleryComponent } from './pages/gallery/gallery.component';
-import { AboutComponent } from './pages/about/about.component';
 import { DebugComponent } from './pages/debug/debug.component';
-import { ExchangeDetailsComponent } from './pages/exchange-details/exchange-details.component';
-import { ExchangeListComponent } from './pages/exchange-list/exchange-list.component';
-import { HomeComponent } from './pages/home/home.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
-import { ProfileComponent } from './pages/profile/profile.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'exchanges', component: ExchangeListComponent },
-  { path: 'exchanges/:id', component: ExchangeDetailsComponent },
-  { path: 'profile', component: ProfileComponent },
-  { path: 'gallery', component: GalleryComponent },
-  { path: 'about', component: AboutComponent },
+  { path: '', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
+  { path: 'test', loadChildren: () => import('./pages/test/test.module').then(m => m.TestModule) },
+  { path: 'about', loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule) },
+  { path: 'profile', loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfileModule) },
+  { path: 'gallery', loadChildren: () => import('./pages/gallery/gallery.module').then(m => m.GalleryModule) },
+  { path: 'exchanges', loadChildren: () => import('./pages/exchanges/exchanges.module').then(m => m.ExchangesModule) },
   { path: 'debug', component: DebugComponent },
   { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
 ];
