@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-exchange-details',
@@ -7,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExchangeDetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+    const exchangeID = this.route.snapshot.paramMap.get('id');
     console.log('exchange detail page');
+    console.log(exchangeID);
   }
 
 }

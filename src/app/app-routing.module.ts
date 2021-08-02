@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { GalleryComponent } from './pages/gallery/gallery.component';
 import { AboutComponent } from './pages/about/about.component';
+import { DebugComponent } from './pages/debug/debug.component';
 import { ExchangeDetailsComponent } from './pages/exchange-details/exchange-details.component';
 import { ExchangeListComponent } from './pages/exchange-list/exchange-list.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -12,7 +14,9 @@ const routes: Routes = [
   { path: 'exchanges', component: ExchangeListComponent },
   { path: 'exchanges/:id', component: ExchangeDetailsComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'gallery', component: GalleryComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'debug', component: DebugComponent },
   { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
 ];
 

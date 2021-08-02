@@ -11,6 +11,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { ExchangeListComponent } from './pages/exchange-list/exchange-list.component';
 import { ExchangeDetailsComponent } from './pages/exchange-details/exchange-details.component';
 import { AboutComponent } from './pages/about/about.component';
+import { DebugComponent } from './pages/debug/debug.component';
+import { GalleryComponent } from './pages/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { AboutComponent } from './pages/about/about.component';
     HomeComponent,
     ExchangeListComponent,
     ExchangeDetailsComponent,
-    AboutComponent
+    AboutComponent,
+    DebugComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
