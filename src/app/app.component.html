@@ -1,36 +1,38 @@
-<div data-sticky-container>
-  <div class="title-bar" data-sticky data-options="marginTop:0;" style="width:100%">
-    <div class="title-bar-left">
-      <ul class="menu">
-        <li><a href="#">One</a></li>
-        <li><a href="#">Two</a></li>
-        <li><a href="#">Three</a></li>
-        <li><a href="#">Four</a></li>
-      </ul>
-    </div>
-    <div class="title-bar-right"> testright</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/debug">debug </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/">home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/profile">profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/exchanges">exchange list</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/exchanges/150">exchange specifique</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/gallery">gallery</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/about">about</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li> -->
+    </ul>
   </div>
-</div>
+</nav>
 
-<h1>hello world</h1>
-
-<div class="grid-x">
-  <div class="cell">full width cell</div>
-  <div class="cell">full width cell</div>
-</div>
-<div class="grid-x">
-  <div class="cell small-6">6 cells</div>
-  <div class="cell small-6">6 cells</div>
-</div>
-<div class="grid-x">
-  <div class="cell medium-6 large-4">12/6/4 cells</div>
-  <div class="cell medium-6 large-8">12/6/8 cells</div>
-</div>
-
-
-<h2>Login</h2>
-
-
-<button>Google</button>
-<button>Facebook</button>
-<button>Reddit</button>
+<router-outlet></router-outlet>
