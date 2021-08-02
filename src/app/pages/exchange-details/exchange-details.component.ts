@@ -10,6 +10,7 @@ export class ExchangeDetailsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('exchange detail page');
   }
 
 }
